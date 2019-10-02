@@ -1,7 +1,3 @@
-/*
-* This is taken mostly from the react-native-device-info package:
-*   https://github.com/react-native-community/react-native-device-info
-*/
 #include <ifaddrs.h>
 #include <arpa/inet.h>
 #import <mach/mach.h>
