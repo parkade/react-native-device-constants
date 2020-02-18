@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.reactlibrary.DeviceConstants;
 
 import android.app.UiModeManager;
 import android.content.Context;
