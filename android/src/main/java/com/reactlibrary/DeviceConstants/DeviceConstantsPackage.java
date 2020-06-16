@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.reactlibrary.deviceconstants;
 
 import java.util.Arrays;
 import java.util.Collections;
