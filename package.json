@@ -1,7 +1,7 @@
 {
   "name": "react-native-device-constants",
   "title": "React Native Device Constants",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "TODO",
   "main": "index.js",
   "scripts": {

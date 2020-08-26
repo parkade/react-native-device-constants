@@ -14,6 +14,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableNativeArray;
 
+import static android.provider.Settings.Secure.getString;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -159,6 +161,14 @@ public class DeviceConstantsModule extends ReactContextBaseJavaModule {
         }
     }
 
+    private String getUniqueID() {
+        try {
+            return Settings.Secure.getString(getReactApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+        } catch (Exception e) {
+            return "unknown";
+        }
+    }
+
     private String getBuildNumber() {
         try {
             return Integer.toString(getPackageInfo().versionCode);
@@ -238,6 +248,7 @@ public class DeviceConstantsModule extends ReactContextBaseJavaModule {
         constants.put("appBuildNumber", this.getBuildNumber());
         constants.put("appBundleId", this.getBundleId());
         constants.put("deviceId", this.getDeviceId());
+        constants.put("uniqueId", this.getUniqueID());
         constants.put("deviceName", this.getDeviceName());
         constants.put("deviceType", this.getDeviceType().getValue());
         constants.put("deviceModel", this.getModel());
