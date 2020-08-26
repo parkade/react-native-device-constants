@@ -14,7 +14,6 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableNativeArray;
 
-import android.provider.Settings;
 import static android.provider.Settings.Secure.getString;
 
 import java.util.HashMap;
@@ -164,7 +163,7 @@ public class DeviceConstantsModule extends ReactContextBaseJavaModule {
 
     private String getUniqueID() {
         try {
-            return Settings.Secure.ANDROID_ID;
+            return Settings.Secure.getString(getReactApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
         } catch (Exception e) {
             return "unknown";
         }

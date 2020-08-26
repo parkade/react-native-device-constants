@@ -80,6 +80,9 @@ export default {
   // marketing device ID, e.g. "iPhone 11"
   deviceName: DeviceConstants.deviceName,
 
+  // unique ID, e.g. ""9547b2fs7d8bhd8e""
+  uniqueId: DeviceConstants.uniqueId,
+
   // One of: "Handset", "Tablet", "Tv", "Unknown"
   deviceType: DeviceConstants.deviceType,
 
